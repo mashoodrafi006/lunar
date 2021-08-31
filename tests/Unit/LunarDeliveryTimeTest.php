@@ -12,10 +12,10 @@ class LunarDeliveryTimeTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function test_get_correct_lunar_delivery_time()
     {
         $dispatchTime = "2021-01-01 10:00";
         $lunarDeliveryTime =  (new LunarService())->getLunarDeliveryTime($dispatchTime);
-        $this->assertEquals("54-1-16 1:48:7",$lunarDeliveryTime);
+        $this->assertEquals("54-1-16 1:48:47",$lunarDeliveryTime);
     }
 }

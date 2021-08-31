@@ -21,6 +21,5 @@ class LunarController extends BaseController
         }catch (\Exception $exception){
             return response()->json(['status' => config("constants.STATUS_CODES.BAD_REQUEST"), 'message'=>'success','body'=> $exception->getMessage()]);
         }
-
     }
 }
