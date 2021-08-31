@@ -35,8 +35,7 @@ class LunarDeliveryTimeTest extends TestCase
             ->assertStatus(Response::HTTP_OK)
             ->assertJson([
                 "status" => Response::HTTP_BAD_REQUEST,
-                "message" => "Pass dispatchTime as parameter.",
-                "body" => "Dispatch time missing."
+                "message" => "Pass dispatchTime as parameter."
             ]);
     }
 

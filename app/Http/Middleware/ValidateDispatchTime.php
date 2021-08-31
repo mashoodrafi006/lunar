@@ -25,7 +25,7 @@ class ValidateDispatchTime
                 new Carbon($dispatchTime);
                 return $next($request);
             }else{
-                return response()->json(['status' => config("constants.STATUS_CODES.BAD_REQUEST"), 'message'=>'Pass dispatchTime as parameter.','body'=> "Dispatch time missing."]);
+                return response()->json(['status' => config("constants.STATUS_CODES.BAD_REQUEST"), 'message'=>'Pass dispatchTime as parameter.','body'=> ""]);
             }
         }catch (\Exception $exception){
             return response()->json(['status' => config("constants.STATUS_CODES.BAD_REQUEST"), 'message'=>'Pass time in correct format.','body'=> $exception->getMessage()]);
